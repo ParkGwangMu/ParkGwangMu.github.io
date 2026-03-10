@@ -1,11 +1,11 @@
-# pgm7560
+# ParkGwangMu
 
-GitHub Pages starter site for the `pgm7560` account.
+GitHub Pages starter site for the `ParkGwangMu` account.
 
 ## Publish target
 
 Create the GitHub repository as:
 
-`pgm7560.github.io`
+`ParkGwangMu.github.io`
 
 Then upload the files in this folder to that repository.
