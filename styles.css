@@ -35,6 +35,32 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.card {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(31, 26, 23, 0.1);
+}
+
+.card-copy h2 {
+  margin: 6px 0 0;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+
+.section-label {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section-text {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: var(--accent-strong);
@@ -63,6 +89,7 @@ h1 {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 28px;
+  margin-bottom: 8px;
 }
 
 .button {
@@ -84,6 +111,60 @@ h1 {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
 }
 
+.contact-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field span {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(31, 26, 23, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--text);
+  font: inherit;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.submit {
+  width: fit-content;
+}
+
+.status {
+  min-height: 1.5rem;
+  margin: 0;
+  color: var(--muted);
+}
+
+.status[data-state="success"] {
+  color: #21613b;
+}
+
+.status[data-state="error"] {
+  color: #9b2f23;
+}
+
+.status[data-state="warning"] {
+  color: #8a5a16;
+}
+
 @media (max-width: 640px) {
   .hero {
     padding: 40px 22px;
@@ -94,6 +175,10 @@ h1 {
   }
 
   .button {
+    width: 100%;
+  }
+
+  .submit {
     width: 100%;
   }
 }

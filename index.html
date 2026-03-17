@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ParkGwangMu</title>
-    <meta name="description" content="ParkGwangMu GitHub Pages site">
+    <meta name="description" content="ParkGwangMu GitHub Pages site with Supabase integration">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -12,12 +12,39 @@
       <p class="eyebrow">GitHub Pages</p>
       <h1>ParkGwangMu</h1>
       <p class="intro">
-        이 사이트는 GitHub Pages로 배포되는 개인 홈페이지 기본 템플릿입니다.
+        This personal GitHub Pages site now includes a Supabase-backed contact form for storing visitor messages.
       </p>
       <div class="actions">
         <a class="button primary" href="https://github.com/ParkGwangMu">GitHub</a>
-        <a class="button" href="mailto:you@example.com">Contact</a>
+        <a class="button" href="mailto:you@example.com">Email</a>
       </div>
+      <section class="card" aria-labelledby="contact-title">
+        <div class="card-copy">
+          <p class="section-label">Supabase Connected</p>
+          <h2 id="contact-title">Leave a message</h2>
+          <p class="section-text">
+            Submit the form below and the data will be inserted into the Supabase
+            <code>site_messages</code> table.
+          </p>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <label class="field">
+            <span>Name</span>
+            <input id="name" name="name" type="text" maxlength="80" placeholder="Jane Doe" required>
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input id="email" name="email" type="email" maxlength="120" placeholder="name@example.com">
+          </label>
+          <label class="field">
+            <span>Message</span>
+            <textarea id="message" name="message" rows="5" maxlength="500" placeholder="Hello there" required></textarea>
+          </label>
+          <button class="button primary submit" type="submit">Send to Supabase</button>
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
     </main>
+    <script type="module" src="main.js"></script>
   </body>
-  </html>
+</html>
